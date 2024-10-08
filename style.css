@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+    margin: 1;
+    padding: 1;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient(78deg, rgb(10, 44, 64) 20%,
+                                 rgb(5, 45, 100) 49%,
+                                 rgb(29, 4, 92) 80%,
+                                 rgb(0, 0, 0) 110%);
+}
+
+body {
+    height: 100%;
+    display: grid;
+    place-items: center;
+}
+
+.wrapper {
+    background-color: hsl(0, 0%, 100%);
+    padding-right: 50px;
+    height: 250px;
+    width: 600px;
+    border-radius: 10px;
+    box-shadow: 0 .8rem 2.5rem hsl(0, 0%, 0%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper.active {
+    height: 300px;
+}
+
+.wrapper.active .header h1 {
+    font-size: 2rem;
+}
+
+.header-form {
+    padding-left: 50px;
+    margin-right: 10px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper .header h1 {
+    font-size: 3rem;
+    text-align: center;
+}
+
+.wrapper .header p {
+    font-size: 1.6rem;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.wrapper .form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.wrapper .from input {
+    background-color: transparent;
+    width: 100%;
+    outline: none;
+    height: 40px;
+    margin-bottom: 2rem;
+    border: none;
+    border-bottom: .1rem solid rgb(0, 122, 128);
+}
+
+.wrapper .form input::placeholder {
+    padding-left: .5rem;
+    color: black;
+}
+
+.wrapper .form button {
+    width: 100%;
+    height: 40px;
+    margin: 20px 20px 20px 20px;
+    background: linear-gradient(78deg, rgb(10, 44, 64) 20%,
+    rgb(5, 45, 100) 49%,
+    rgb(29, 4, 92) 80%,
+    rgb(0, 0, 0) 110%);
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    color:  #eee;
+    cursor: pointer;
+}
+
+.wrapper .form button:hover {
+    border: .1rem solid rgb(30, 100, 127);
+    border-width: 4px;
+    color: rgb(13, 67, 89);
+    background: transparent;
+    background-color: transparent;
+    font-weight: bolder;
+}
+
+.wrapper .qr-code {
+    display: none;
+    padding: 15px;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 10px;
+    border-radius: 5px;
+    pointer-events: none;
+    border: 1px solid #ccc;
+}
+
+.wrapper .qr-code img {
+    width: 170px;
+}
+
+.wrapper.active .qr-code {
+    display: block;
+    transition: all .5s .5s ease;
+}
